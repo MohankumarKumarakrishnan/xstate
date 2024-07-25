@@ -37,7 +37,7 @@ export default function App() {
     if (selectedCountry && selectedState) {
       axios
         .get(
-          `https://crio-location-selector.onrender.com/country={countryName}/state={stateName}/cities`
+          `https://crio-location-selector.onrender.com/country=${selectedCountry}/state=${selectedState}/cities`
         )
         .then((res) => {
           setCities(res.data);
